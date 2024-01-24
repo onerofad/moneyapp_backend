@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a5vty&-u73nhb*r-gr5d8mc@ira+wk_f$hrm*xix10b(=sb@@6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://moneyapp-frontend.vercel.app']
 
 
 # Application definition
@@ -83,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'BDgF5GFdAf3*4EEDcG5ADb*dFdg2bBE-',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '59226'
+        'PASSWORD': 'Fg*CcEEEe*ed4-22BaFddbfGgcAFg41e',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '24649'
     }
 }
 
@@ -135,6 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
    'http://localhost:3000',
+   'https://moneyapp-frontend.vercel.app'
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
