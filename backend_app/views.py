@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Accounts
-from .serializers import AccountSerializer
+from .models import Register
+from .serializers import RegisterSerializer
 from rest_framework import viewsets
 
-class AccountView(viewsets.ModelViewSet):
-    queryset = Accounts.objects.all()
-    serializer_class = AccountSerializer
+class RegisterView(viewsets.ModelViewSet):
+    queryset = Register.objects.all()
+    serializer_class = RegisterSerializer
