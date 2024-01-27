@@ -5,6 +5,7 @@ class Register(models.Model):
     lname = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
+    address = models.TextField(default = '')
     password = models.CharField(max_length=255)
     verify = models.IntegerField(default=0)
 
