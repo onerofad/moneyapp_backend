@@ -8,5 +8,5 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class ExchangeRatesSerializer(serializers.ModelSerializer):
     class Meta:
-        firld = '__all__'
+        fields = '__all__'
         model = ExchangeRates
