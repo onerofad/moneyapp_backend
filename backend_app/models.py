@@ -17,6 +17,7 @@ class ExchangeRates(models.Model):
     country = models.CharField(max_length = 255)
     countrycode = models.CharField(max_length = 255)
     rate = models.FloatField()
+    fee = models.FloatField(default = 0)
 
     def __str__(self):
         return self.country
