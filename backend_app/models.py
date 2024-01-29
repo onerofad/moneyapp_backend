@@ -12,3 +12,11 @@ class Register(models.Model):
 
     def __str__(self):
         return self.fname
+
+class ExchangeRates(models.Model):
+    country = models.CharField(max_length = 255)
+    countrycode = models.CharField(max_length = 255)
+    rate = models.FloatField()
+
+    def __str__(self):
+        return self.country
