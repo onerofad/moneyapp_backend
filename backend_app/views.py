@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Register, ExchangeRates
-from .serializers import RegisterSerializer, ExchangeRatesSerializer
+from .models import Register, ExchangeRates, Transactions
+from .serializers import RegisterSerializer, ExchangeRatesSerializer, TransactionSerializer
 from rest_framework import viewsets
 
 class RegisterView(viewsets.ModelViewSet):
@@ -10,3 +10,7 @@ class RegisterView(viewsets.ModelViewSet):
 class ExchangeRatesView(viewsets.ModelViewSet):
     queryset = ExchangeRates.objects.all()
     serializer_class = ExchangeRatesSerializer
+
+class TransactionView(viewsets.ModelViewSet):
+    queryset = Transactions.objects.all()
+    serializer_class = TransactionSerializer
