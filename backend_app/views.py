@@ -14,3 +14,4 @@ class ExchangeRatesView(viewsets.ModelViewSet):
 class TransactionView(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
     serializer_class = TransactionSerializer
+
