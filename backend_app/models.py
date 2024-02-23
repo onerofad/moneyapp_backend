@@ -63,4 +63,5 @@ class Transactions(models.Model):
     b_city = models.CharField(max_length = 255)
     b_region = models.CharField(max_length = 255)
     zipcode = models.CharField(max_length = 255)
+    senderEmail = models.CharField(max_length = 255, default = '')
     trans_date = models.DateField(auto_now = True)
