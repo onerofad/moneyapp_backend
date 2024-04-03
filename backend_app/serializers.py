@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Register, ExchangeRates, Transactions
+from .models import Register, ExchangeRates, Transactions, PaymentMethod
 
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,4 +16,8 @@ class TransactionSerializer(serializers.ModelSerializer):
         fields = '__all__'
         model = Transactions
 
+class PaymentMethodSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = PaymentMethod
 

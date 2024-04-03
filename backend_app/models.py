@@ -67,4 +67,17 @@ class Transactions(models.Model):
     senderEmail = models.CharField(max_length = 255, default = '')
     trans_date = models.DateField(auto_now = True)
 
-    
+class PaymentMethod(models.Model):
+    cardNumber = models.CharField(max_length = 255)
+    expiration = models.CharField(max_length = 255)
+    securityCode = models.CharField(max_length = 255)
+    b_fname = models.CharField(max_length = 255)
+    nickname = models.CharField(max_length = 255) 
+    streetAd = models.CharField(max_length = 255)
+    apartment = models.CharField(max_length = 255)
+    b_city = models.CharField(max_length = 255)
+    b_region = models.CharField(max_length = 255)
+    zipcode = models.CharField(max_length = 255)
+
+    def __str__(self):
+        return self.cardNumber
