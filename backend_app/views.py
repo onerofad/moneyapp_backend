@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Register, ExchangeRates, Transactions
 from .serializers import RegisterSerializer, ExchangeRatesSerializer, TransactionSerializer
 from rest_framework import viewsets
@@ -14,4 +13,9 @@ class ExchangeRatesView(viewsets.ModelViewSet):
 class TransactionView(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
     serializer_class = TransactionSerializer
+
+class PaymentMethodView(viewsets.ModelViewSet):
+    queryset = Transactions.objects.only("cardNumber")
+    serializer_class = TransactionSerializer
+
 

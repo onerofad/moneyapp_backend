@@ -17,14 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from backend_app.views import RegisterView, ExchangeRatesView, TransactionView
+from backend_app.views import RegisterView, ExchangeRatesView, TransactionView, PaymentMethodView
 
 router = routers.DefaultRouter()
 router.register('register', RegisterView, 'register')
 router.register('rates', ExchangeRatesView, 'rate')
 router.register('transactions', TransactionView, 'transaction')
+router.register('paymentmethod', PaymentMethodView, 'paymentmethods')
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+
 ]
