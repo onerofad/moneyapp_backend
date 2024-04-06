@@ -82,3 +82,9 @@ class PaymentMethod(models.Model):
 
     def __str__(self):
         return self.cardNumber
+    
+class BankInfo(models.Model):
+    bank_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.bank_name

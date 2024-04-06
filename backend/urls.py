@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from backend_app.views import RegisterView, ExchangeRatesView, TransactionView, PaymentMethodView
+from backend_app.views import RegisterView, ExchangeRatesView, TransactionView, PaymentMethodView, BankInfoView
 
 router = routers.DefaultRouter()
 router.register('register', RegisterView, 'register')
 router.register('rates', ExchangeRatesView, 'rate')
 router.register('transactions', TransactionView, 'transaction')
 router.register('paymentmethod', PaymentMethodView, 'paymentmethods')
+router.register('bankinfo', BankInfoView, 'bankinformation')
 
 
 
