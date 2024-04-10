@@ -32,9 +32,7 @@ class Transactions(models.Model):
 
     deliveryBank = models.BooleanField(default = False)
     deliveryCash = models.BooleanField(default = False)
-    zenith = models.BooleanField(default = False)
-    gtb = models.BooleanField(default = False)
-    polaris = models.BooleanField(default = False)
+    bankname = models.CharField(max_length = 255, default = "")
 
     accountNumber = models.CharField(max_length = 255)
     retypeAccountNumber = models.CharField(max_length = 255)
