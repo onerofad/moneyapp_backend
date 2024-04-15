@@ -32,7 +32,7 @@ class BankInfoSerializer(serializers.ModelSerializer):
         model = BankInfo
 
 class RecepientSerializer(serializers.ModelSerializer):
-    class Mata:
+    class Meta:
         fields = '__all__'
         model = Recepients
 
