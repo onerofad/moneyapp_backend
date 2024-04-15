@@ -1,5 +1,5 @@
-from .models import Register, ExchangeRates, Transactions, PaymentMethod, BankInfo
-from .serializers import RegisterSerializer, ExchangeRatesSerializer, TransactionSerializer, PaymentMethodSerializer, BankInfoSerializer
+from .models import Register, ExchangeRates, Transactions, PaymentMethod, BankInfo, Recepients
+from .serializers import RegisterSerializer, ExchangeRatesSerializer, TransactionSerializer, PaymentMethodSerializer, BankInfoSerializer, RecepientSerializer
 from rest_framework import viewsets
 
 class RegisterView(viewsets.ModelViewSet):
@@ -13,6 +13,11 @@ class ExchangeRatesView(viewsets.ModelViewSet):
 class TransactionView(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
     serializer_class = TransactionSerializer
+
+class RecepientView(viewsets.ModelViewSet):
+    queryset = Recepients.objects.all()
+    serializer_class = RecepientSerializer
+
 
 class PaymentMethodView(viewsets.ModelViewSet):
     queryset = PaymentMethod.objects.all()

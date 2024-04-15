@@ -87,3 +87,19 @@ class BankInfo(models.Model):
 
     def __str__(self):
         return self.bank_name
+    
+class Recepients(models.Model):
+    fname = models.CharField(max_length = 255)
+    mname = models.CharField(max_length = 255, default = "")
+    lname = models.CharField(max_length = 255)
+    slname = models.CharField(max_length = 255, default = "")
+    country = models.CharField(max_length = 255)
+    email = models.CharField(max_length = 255)
+    street = models.CharField(max_length = 255)
+    street2 = models.CharField(max_length = 255, default = "")
+    region = models.CharField(max_length = 255)
+    city = models.CharField(max_length = 255)
+    postal = models.CharField(max_length = 255)
+
+    def __str__(self):
+        return self.fname
