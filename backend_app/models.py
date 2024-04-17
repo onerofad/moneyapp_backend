@@ -100,6 +100,7 @@ class Recepients(models.Model):
     region = models.CharField(max_length = 255)
     city = models.CharField(max_length = 255)
     postal = models.CharField(max_length = 255)
+    account_email = models.CharField(max_length= 255, default="")
 
     def __str__(self):
         return self.fname
