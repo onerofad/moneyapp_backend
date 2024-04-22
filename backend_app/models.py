@@ -90,13 +90,13 @@ class BankInfo(models.Model):
     
 class Recepients(models.Model):
     fname = models.CharField(max_length = 255)
-    mname = models.CharField(max_length = 255, default = "")
+    mname = models.CharField(max_length = 255, default = "none")
     lname = models.CharField(max_length = 255)
-    slname = models.CharField(max_length = 255, default = "")
+    slname = models.CharField(max_length = 255, default = "none")
     country = models.CharField(max_length = 255)
     email = models.CharField(max_length = 255)
     street = models.CharField(max_length = 255)
-    street2 = models.CharField(max_length = 255, default = "")
+    street2 = models.CharField(max_length = 255, default = "none")
     region = models.CharField(max_length = 255)
     city = models.CharField(max_length = 255)
     postal = models.CharField(max_length = 255)
