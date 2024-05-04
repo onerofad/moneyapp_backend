@@ -9,8 +9,8 @@ class Register(models.Model):
     dob = models.DateField(default='2024-01-24')
     password = models.CharField(max_length=255)
     verify = models.IntegerField(default=0)
-    email_notification = models.BooleanField(default=False)
-    text_notification = models.BooleanField(default=False)
+    email_notification = models.CharField(default="0")
+    text_notification = models.CharField(default="0")
 
     def __str__(self):
         return self.fname
