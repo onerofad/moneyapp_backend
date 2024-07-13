@@ -137,6 +137,8 @@ CORS_ORIGIN_WHITELIST = [
    'http://localhost:3000',
    'https://moneyapp-frontend.vercel.app',
    'http://localhost:8081',
+   'http://localhost:8082',
+   'exp://192.168.187.153:8082',
    'exp://192.168.187.153:8081',
 
 ]
