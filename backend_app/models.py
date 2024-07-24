@@ -106,3 +106,13 @@ class Recepients(models.Model):
 
     def __str__(self):
         return self.fname
+    
+class TemporaryTransactions(models.Model):
+    moneySent = models.FloatField(default='')
+    moneyReceived = models.FloatField(default='')
+    currencySent = models.CharField(max_length = 255, default = '')
+    currencyReceived = models.CharField(max_length = 255, default = '' )
+    fee = models.FloatField(default='')
+    total = models.FloatField(default='')
+
+    
