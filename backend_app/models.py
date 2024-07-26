@@ -115,4 +115,9 @@ class TemporaryTransactions(models.Model):
     fee = models.FloatField(default='')
     total = models.FloatField(default='')
 
+    deliveryBank = models.BooleanField(default = False)
+    deliveryCash = models.BooleanField(default = False)
+    bankname = models.CharField(max_length = 255, default = "")
+
+
     
