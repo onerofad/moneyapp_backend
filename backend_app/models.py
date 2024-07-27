@@ -119,5 +119,10 @@ class TemporaryTransactions(models.Model):
     deliveryCash = models.BooleanField(default = False)
     bankname = models.CharField(max_length = 255, default = "")
 
+    accountNumber = models.CharField(max_length = 255, default = "" )
+    retypeAccountNumber = models.CharField(max_length = 255, default = "")
+    checking = models.BooleanField(default = False)
+    savings = models.BooleanField(default = False)
+
 
     
