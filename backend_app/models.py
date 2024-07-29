@@ -124,5 +124,17 @@ class TemporaryTransactions(models.Model):
     checking = models.BooleanField(default = False)
     savings = models.BooleanField(default = False)
 
+    fname = models.CharField(max_length = 255, default = '')
+    mname = models.CharField(max_length = 255, default = '')
+    lname = models.CharField(max_length = 255, default = '')
+    slname = models.CharField(max_length = 255, default = '')
+    country = models.CharField(max_length = 255, default = '')
+    email = models.CharField(max_length = 255, default = '')
+    street = models.CharField(max_length = 255, default = '')
+    street2 = models.CharField(max_length = 255, default = '' )
+    region = models.CharField(max_length = 255, default='')
+    city = models.CharField(max_length = 255, default='')
+    postal = models.CharField(max_length = 255, default='')
+
 
     
