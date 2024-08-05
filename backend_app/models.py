@@ -136,5 +136,16 @@ class TemporaryTransactions(models.Model):
     city = models.CharField(max_length = 255, default='')
     postal = models.CharField(max_length = 255, default='')
 
+    cardNumber = models.CharField(max_length = 255, default='')
+    expiration = models.CharField(max_length = 255, default='')
+    securityCode = models.CharField(max_length = 255, default='')
+    b_fname = models.CharField(max_length = 255, default='')
+    nickname = models.CharField(max_length = 255, default = 'none') 
+    streetAd = models.CharField(max_length = 255, default='')
+    apartment = models.CharField(max_length = 255,  default = 'none')
+    b_city = models.CharField(max_length = 255, default='')
+    b_region = models.CharField(max_length = 255, default='')
+    zipcode = models.CharField(max_length = 255, default='')
+
 
     
