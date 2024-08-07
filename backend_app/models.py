@@ -1,4 +1,10 @@
 from django.db import models
+from random import randint
+
+def random_with_N_digits(n):
+    range_start = 10**(n-1)
+    range_end = (10**n)-1
+    return randint(range_start, range_end)
 
 class Register(models.Model):
     fname = models.CharField(max_length=255)
@@ -146,6 +152,7 @@ class TemporaryTransactions(models.Model):
     b_city = models.CharField(max_length = 255, default='')
     b_region = models.CharField(max_length = 255, default='')
     zipcode = models.CharField(max_length = 255, default='')
+    auto_id = models.CharField(random_with_N_digits(10), default='') 
 
 
     
