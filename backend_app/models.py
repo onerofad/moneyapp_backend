@@ -152,7 +152,7 @@ class TemporaryTransactions(models.Model):
     b_city = models.CharField(max_length = 255, default='')
     b_region = models.CharField(max_length = 255, default='')
     zipcode = models.CharField(max_length = 255, default='')
-    auto_id = models.CharField(random_with_N_digits(10), default='') 
+    auto_id = models.IntegerField(random_with_N_digits(10)) 
 
 
     
