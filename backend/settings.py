@@ -78,14 +78,24 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#   'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'railway',
+#        'USER': 'postgres',
+#        'PASSWORD': 'jifIJzPdPFhxVFyxzfkhepRGIQRrBfqD',
+#        'HOST': 'localhost',
+#       'PORT': '5432'
+#   }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'RYfeuOwAiowTyaSkWgeGdHXOHFSAVHyG',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '42399'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'moneyapp_database',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
