@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(f'postgresql://postgres:jifIJzPdPFhxVFyxzfkhepRGIQRrBfqD@autorack.proxy.rlwy.net:12376/railway')
+    'default': dj_database_url.parse(f'postgresql://postgres:gvaePnJIAooLjKpmxMsBMBAZLtOPTGGv@autorack.proxy.rlwy.net:50428/railway')
 }
 
 
