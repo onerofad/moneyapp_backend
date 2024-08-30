@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path, os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,15 +93,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #       'PORT': '5432'
 #   }
 #}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'moneyapp_database',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
+    'default': dj_database_url.parse(f'postgresql://postgres:jifIJzPdPFhxVFyxzfkhepRGIQRrBfqD@autorack.proxy.rlwy.net:12376/railway')
 }
 
 
