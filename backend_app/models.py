@@ -88,6 +88,18 @@ class PaymentMethod(models.Model):
 
     def __str__(self):
         return self.cardNumber
+
+class Country(models.Model):
+    name = models.CharField(max_length=255, default="")
+    name1 = models.CharField(max_length=255, default="")
+    name2 = models.CharField(max_length=255, default="")
+    code = models.CharField(max_length=255, default="")
+    code1 = models.CharField(max_length=255, default="")
+    code2 = models.CharField(max_length=255, default="")
+
+    def __str__(self):
+        return self.name
+
     
 class BankInfo(models.Model):
     bank_name = models.CharField(max_length=255)
