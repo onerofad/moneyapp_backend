@@ -1,6 +1,7 @@
 from .models import Register, ExchangeRates, Transactions, PaymentMethod, BankInfo, Recepients, TemporaryTransactions, Country
 from .serializers import RegisterSerializer, ExchangeRatesSerializer, TransactionSerializer, PaymentMethodSerializer, BankInfoSerializer, RecepientSerializer, TemporaryTransactionSerializer, CountrySerializer
 from rest_framework import viewsets
+from datetime import date
 
 class RegisterView(viewsets.ModelViewSet):
     queryset = Register.objects.all()
@@ -12,6 +13,10 @@ class ExchangeRatesView(viewsets.ModelViewSet):
 
 class TransactionView(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
+    serializer_class = TransactionSerializer
+
+class RecentTransactionView(viewsets.ModelViewSet):
+    queryset = Transactions.objects.filter(trans_date = date.today())
     serializer_class = TransactionSerializer
 
 class RecepientView(viewsets.ModelViewSet):
