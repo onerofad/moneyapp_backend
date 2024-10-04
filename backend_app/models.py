@@ -1,10 +1,15 @@
 from django.db import models
-from random import randint
+#from random import randint
+import random
 
 def random_with_N_digits(n):
     range_start = 10**(n-1)
     range_end = (10**n)-1
-    return randint(range_start, range_end)
+    #return randint(range_start, range_end)
+
+def getRandom():
+    random_number = random.randint(1000000000, 9999999999)
+    return random_number
 
 class Register(models.Model):
     fname = models.CharField(max_length=255)
@@ -72,6 +77,9 @@ class Transactions(models.Model):
 
     senderEmail = models.CharField(max_length = 255, default = '')
     trans_date = models.DateField(auto_now = True)
+
+    status = models.CharField(max_length=255, default='Pending')
+    trans_id = models.CharField(max_length=255, default=getRandom())
 
 class PaymentMethod(models.Model):
     cardNumber = models.CharField(max_length = 255)
