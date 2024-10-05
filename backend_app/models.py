@@ -171,6 +171,7 @@ class TemporaryTransactions(models.Model):
     b_region = models.CharField(max_length = 255, default='')
     zipcode = models.CharField(max_length = 255, default='')
     emailId = models.CharField(max_length = 255, default='')
+    moneyRate = models.FloatField(default=0)
 
 
     
