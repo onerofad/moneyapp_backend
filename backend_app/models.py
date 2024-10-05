@@ -29,7 +29,7 @@ class Register(models.Model):
 class ExchangeRates(models.Model):
     country = models.CharField(max_length = 255)
     countrycode = models.CharField(max_length = 255)
-    rate = models.IntegerField()
+    rate = models.FloatField()
     fee = models.IntegerField(default = 0)
 
     def __str__(self):
