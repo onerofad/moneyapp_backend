@@ -81,6 +81,8 @@ class Transactions(models.Model):
     status = models.CharField(max_length=255, default='Pending')
     trans_id = models.CharField(max_length=255, default=getRandom())
 
+    moneyRate = models.FloatField(default=0)
+
 class PaymentMethod(models.Model):
     cardNumber = models.CharField(max_length = 255)
     expiration = models.CharField(max_length = 255)
