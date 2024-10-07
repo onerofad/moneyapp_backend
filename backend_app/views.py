@@ -12,7 +12,7 @@ class ExchangeRatesView(viewsets.ModelViewSet):
     serializer_class = ExchangeRatesSerializer
 
 class TransactionView(viewsets.ModelViewSet):
-    queryset = Transactions.objects.all()
+    queryset = Transactions.objects.order_by("-trans_date")
     serializer_class = TransactionSerializer
 
 class RecentTransactionView(viewsets.ModelViewSet):
