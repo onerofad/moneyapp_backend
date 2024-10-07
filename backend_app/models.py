@@ -82,6 +82,8 @@ class Transactions(models.Model):
     trans_id = models.CharField(max_length=255, default=getRandom())
 
     moneyRate = models.FloatField(default=0)
+    currencySentLabel = models.CharField(max_length=255, default='')
+    currencyReceivedLabel = models.CharField(max_length=255, default='')
 
 class PaymentMethod(models.Model):
     cardNumber = models.CharField(max_length = 255)
@@ -172,6 +174,9 @@ class TemporaryTransactions(models.Model):
     zipcode = models.CharField(max_length = 255, default='')
     emailId = models.CharField(max_length = 255, default='')
     moneyRate = models.FloatField(default=0)
+    currencySentLabel = models.CharField(max_length=255, default='')
+    currencyReceivedLabel = models.CharField(max_length=255, default='')
+
 
 
     
