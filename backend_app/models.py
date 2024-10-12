@@ -79,7 +79,7 @@ class Transactions(models.Model):
     trans_date = models.DateField(auto_now = True)
 
     status = models.CharField(max_length=255, default='Pending')
-    trans_id = models.CharField(max_length=255, default=getRandom())
+    trans_id = models.CharField(max_length=255)
 
     moneyRate = models.FloatField(default=0)
     currencySentLabel = models.CharField(max_length=255, default='')
@@ -176,6 +176,7 @@ class TemporaryTransactions(models.Model):
     moneyRate = models.FloatField(default=0)
     currencySentLabel = models.CharField(max_length=255, default='')
     currencyReceivedLabel = models.CharField(max_length=255, default='')
+    trans_id = models.CharField(max_length=255, default=getRandom())
 
 
 
