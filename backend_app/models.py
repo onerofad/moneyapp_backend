@@ -32,10 +32,6 @@ class SilaUser(models.Model):
         return self.first_name
     
 
-
-    
-
-
 class Register(models.Model):
     fname = models.CharField(max_length=255)
     lname = models.CharField(max_length=255)
