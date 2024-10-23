@@ -43,5 +43,3 @@ class CountryView(viewsets.ModelViewSet):
 class SilaUserView(viewsets.ModelViewSet):
     queryset = SilaUser.objects.all()
     serializer_class = SilaUserSerializer
-
-

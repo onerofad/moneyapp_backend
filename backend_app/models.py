@@ -1,5 +1,4 @@
 from django.db import models
-#from random import randint
 import random
 
 def random_with_N_digits(n):
@@ -18,21 +17,23 @@ class SilaUser(models.Model):
     last_name = models.CharField(max_length=255)
     entity_name = models.CharField(max_length=255)
     identity_value = models.CharField(max_length=255)
-    identity_alias = models.CharField(max_length=255) 
+    identity_alias = models.CharField(max_length=255, default="SSN") 
     phone = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    address_alias = models.CharField(max_length=255)
+    address_alias = models.CharField(max_length=255, default="default")
     street_address_1 = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
     postal_code = models.CharField(max_length=255)
     crypto_address = models.CharField(max_length=255)
-    crypto_alias = models.CharField(max_length=255)
     birthdate = models.CharField(max_length=255)
-    session_identifier = models.CharField(max_length=255)
 
     def __str__(self):
         return self.first_name
+    
+
+
+    
 
 
 class Register(models.Model):
