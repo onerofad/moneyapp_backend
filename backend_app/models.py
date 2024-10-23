@@ -11,6 +11,30 @@ def getRandom():
     random_number = random.randint(1000000000, 9999999999)
     return random_number
 
+class SilaUser(models.Model):
+    country = models.CharField(max_length=255)
+    user_handle = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    entity_name = models.CharField(max_length=255)
+    identity_value = models.CharField(max_length=255)
+    identity_alias = models.CharField(max_length=255) 
+    phone = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    address_alias = models.CharField(max_length=255)
+    street_address_1 = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    state = models.CharField(max_length=255)
+    postal_code = models.CharField(max_length=255)
+    crypto_address = models.CharField(max_length=255)
+    crypto_alias = models.CharField(max_length=255)
+    birthdate = models.CharField(max_length=255)
+    session_identifier = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.first_name
+
+
 class Register(models.Model):
     fname = models.CharField(max_length=255)
     lname = models.CharField(max_length=255)
