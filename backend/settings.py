@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a5vty&-u73nhb*r-gr5d8mc@ira+wk_f$hrm*xix10b(=sb@@6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://moneyapp-frontend.vercel.app']
+#ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://moneyapp-frontend.vercel.app']
 
 
 # Application definition
@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -148,6 +148,15 @@ CORS_ORIGIN_WHITELIST = [
 
 ]
 
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URLS ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/media/'
+# Also Make aure To set allowed_hosts to '*'
+
+ALLOWED_HOSTS = ['*']
+  
